@@ -1,0 +1,60 @@
+/* Main font for the entire website */
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* WhatsApp button green styles */
+.whatsapp-green { background-color: #25D366; }
+.whatsapp-green:hover { background-color: #1DA851; }
+.whatsapp-icon { width: 3.875rem; height: 3.875rem; }
+
+/* Hero section background gradient */
+.bg-hero {
+    background-color: #1a237e;
+    background-image: linear-gradient(45deg, rgba(20, 30, 90, 0.95), rgba(211, 47, 47, 0.95));
+    background-size: cover;
+    background-position: center;
+}
+
+/* Adds a subtle shadow to text for better readability */
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Card hover animation */
+.card-hover {
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Standard section title and subtitle colors */
+.section-title {
+    color: #1a237e; /* Blue */
+}
+.section-subtitle {
+    color: #d32f2f; /* Red */
+}
+
+/* Modal styles for smooth transition */
+.modal-overlay {
+    transition: opacity 0.3s ease;
+}
+.modal-content {
+    transition: transform 0.3s ease;
+}
+
+/* Team tabs active state styles */
+.tab-btn.active {
+    background-color: #1a237e;
+    color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}

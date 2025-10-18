@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKC School, Junior & Degree College | From KG to PG</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/diwali.css">
+</head>
+<body class="bg-gray-50">
+
+    <div id="diwali-overlay">
+        <canvas id="diwali-canvas" aria-label="Diwali firework animation"></canvas>
+        <p class="diwali-credit">
+            <a href="#" target="_blank">Happy Diwali SKCian's</a>
+            <span>• Made by Jwala Yadav</span>
+        </p>
+    </div>
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+             <a href="#" class="block transition-transform duration-300 hover:scale-105">
+                <img src="assets/SKC KG to PG logo.png" alt="SKC Group Logo" class="h-16">
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="text-gray-600 hover:text-[#1a237e]">About Us</a>
+                <a href="#verticals" class="text-gray-600 hover:text-[#1a237e]">Our Verticals</a>
+                <a href="#events" class="text-gray-600 hover:text-[#1a237e]">Events</a>
+                <a href="#awards" class="text-gray-600 hover:text-[#1a237e]">Awards</a>
+                <a href="#campuses" class="text-gray-600 hover:text-[#1a237e]">Campuses</a>
+                <a href="#results" class="text-gray-600 hover:text-[#1a237e]">Results</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#1a237e]">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-600 focus:outline-none">
+                    <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2">
+             <a href="#about" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">About Us</a>
+             <a href="#verticals" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Our Verticals</a>
+             <a href="#events" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Events</a>
+             <a href="#awards" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Awards</a>
+            <a href="#campuses" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Campuses</a>
+            <a href="#results" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Results</a>
+            <a href="#contact" class="block px-6 py-2 text-gray-600 hover:bg-gray-100">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="bg-hero text-white">
+            <div class="container mx-auto px-6 py-24 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight text-shadow">Admissions Open: From KG to PG</h1>
+                <h2 class="text-2xl md:text-4xl font-semibold mt-4 text-shadow">Confirm Your Seat Now!</h2>
+                <p class="mt-6 max-w-3xl mx-auto text-lg text-gray-200">
+                    Take the first step towards a bright future. Fill out our quick inquiry form and connect with our admissions team directly on WhatsApp.
+                </p>
+                <div class="mt-10">
+                    <button id="open-admission-modal" class="whatsapp-green text-white font-bold py-4 px-6 md:px-10 rounded-full transition duration-300 text-lg shadow-lg inline-flex items-center space-x-3" aria-label="Inquire and chat on WhatsApp">
+                        <svg class="whatsapp-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M21 12.05c0 4.97-4.03 9-9 9a8.94 8.94 0 0 1-4.54-1.26L3 21l1.42-4.5A8.94 8.94 0 0 1 3 12.05c0-4.97 4.03-9 9-9s9 4.03 9 9z" fill="currentColor" opacity="0.08"/>
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.149-.672.15-.198.297-.768.966-.942 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.884-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.447-.521.149-.174.198-.298.297-.497.099-.198.05-.372-.025-.521-.076-.149-.672-1.62-.92-2.219-.242-.583-.487-.504-.672-.513l-.573-.01c-.198 0-.52.074-.792.372s-1.04 1.015-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.077 4.487  .709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.007-1.413.248-.695.248-1.29.173-1.413-.074-.124-.272-.198-.569-.347z" fill="white"/>
+                        </svg>
+                        <span>Inquire & Chat on WhatsApp</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-xl font-bold uppercase tracking-widest section-subtitle">Our Visionary Leadership</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mt-2 section-title">Guiding SKC to New Heights</h3>
+                </div>
+                <div class="flex flex-wrap -mx-4 justify-center">
+                    <div class="w-full md:w-1/3 lg:w-1/4 px-4 mb-8">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center card-hover">
+                            <img src="assets/Stanny Sir.png" alt="Dr. (Adv.) Stanny Pinto Bhartiya" class="w-56 h-56 rounded-full mx-auto mb-4 border-4 border-[#1a237e] shadow-lg">
+                            <h4 class="text-2xl font-bold text-gray-800">Dr. (Adv.) Stanny Pinto Bhartiya</h4>
+                            <p class="text-gray-600 mt-1 text-lg">Chairman & Managing Director</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 px-4 mb-8">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center card-hover">
+                            <img src="assets/Loretta Madam.png" alt="Mrs. Loretta Stanny Pinto" class="w-56 h-56 rounded-full mx-auto mb-4 border-4 border-[#d32f2f] shadow-lg">
+                            <h4 class="text-2xl font-bold text-gray-800">Mrs. Loretta Stanny Pinto</h4>
+                            <p class="text-gray-600 mt-1 text-lg">Joint Director</p>
+                        </div>
+                    </div>
+                    <div class="w-full md:w-1/3 lg:w-1/4 px-4 mb-8">
+                        <div class="bg-gray-50 rounded-lg p-6 text-center card-hover">
+                            <img src="assets/Sharlton Sir.png" alt="Sharlton Stanny Pinto" class="w-56 h-56 rounded-full mx-auto mb-4 border-4 border-[#1a237e] shadow-lg">
+                            <h4 class="text-2xl font-bold text-gray-800">Mr. Sharlton Stanny Pinto</h4>
+                            <p class="text-gray-600 mt-1 text-lg">Trustee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="achievements" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">A Legacy of Excellence</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">Recognized by the Best</h3>
+                     <p class="mt-4 max-w-2xl mx-auto text-gray-600">Our commitment to quality education has been consistently acknowledged, making us a trusted name in Maharashtra and across India.</p>
+                </div>
+                <div class="flex flex-wrap justify-center items-center -m-4">
+                    <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                        <div class="bg-white rounded-lg p-4 card-hover">
+                            <img src="assets/Awards/1.png" alt="Top 29 Science Colleges of Maharashtra - Times of India" class="rounded-md w-full">
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                         <div class="bg-white rounded-lg p-4 card-hover">
+                            <img src="assets/Awards/2.png" alt="The Best State Board Jr. College of Maharashtra" class="rounded-md w-full">
+                        </div>
+                    </div>
+                    <div class="w-full sm:w-1/2 lg:w-1/3 p-4">
+                        <div class="bg-white rounded-lg p-4 card-hover">
+                            <img src="assets/Awards/3.png" alt="Top 500 Jr. Colleges of India" class="rounded-md w-full">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="awards" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Awards & Accolades</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">Celebrating Our Milestones</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">We are honored to be recognized for our contributions to education and leadership.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-1.jpg" alt="Leader who transformed lives Award" class="rounded-md w-full">
+                    </div>
+                     <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-3.jpg" alt="Ph.D in Doctor of Philosophy" class="rounded-md w-full">
+                    </div>
+                     <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-4.jpg" alt="Best Jr. College of Maharashtra" class="rounded-md w-full">
+                    </div>
+                     <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-5.jpg" alt="Best State Board College Award" class="rounded-md w-full">
+                    </div>
+                     <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-6.jpg" alt="Best Teacher Educator Award" class="rounded-md w-full">
+                    </div>
+                     <div class="bg-gray-50 rounded-lg p-4 card-hover">
+                        <img src="assets/Awards-2.jpg" alt="Best Head Mistress Award" class="rounded-md w-full">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="verticals" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Our Educational Verticals</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">A Complete Educational Ecosystem</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">From preschool to post-graduation, we offer a diverse range of programs tailored to every student's learning journey.</p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/4.png" alt="SKC School & Jr. College Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC School & Jr. College</h4>
+                            <p class="text-gray-600 mt-2">Comprehensive education from primary grades through junior college, fostering academic excellence.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/5.png" alt="SKC High Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC High - An Affordable Learning School</h4>
+                            <p class="text-gray-600 mt-2">Quality education made accessible, providing a strong foundation for all students.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/6.png" alt="SKC Global Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC Global - An Experiential Learning School</h4>
+                            <p class="text-gray-600 mt-2">Focus on hands-on learning and global perspectives for a well-rounded educational experience.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/7.png" alt="SKC Jr. College Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC Jr. College of Science, Commerce & Arts</h4>
+                            <p class="text-gray-600 mt-2">Specialized programs for various streams, preparing students for higher education.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/14.png" alt="SKC 8 to 8 Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC 8 to 8 - Full Day School & Junior College</h4>
+                            <p class="text-gray-600 mt-2">Extended learning hours and integrated programs for holistic student development.</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 text-center card-hover flex flex-col justify-between items-center">
+                        <img src="assets/15.png" alt="SKC Degree College Logo" class="h-40 object-contain mb-4">
+                        <div>
+                            <h4 class="text-xl font-bold text-gray-800">SKC Degree College</h4>
+                            <p class="text-gray-600 mt-2">Advanced degree courses across disciplines, preparing graduates for professional careers.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Signature Events</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">Nurturing Talent Beyond Academics</h3>
+                    <p class="mt-4 max-w-3xl mx-auto text-gray-600">We believe in holistic development, and our signature events provide a vibrant platform for students and parents to shine, fostering creativity, leadership, and community spirit.</p>
+                </div>
+                <div class="space-y-16">
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-1">
+                            <h4 class="text-3xl font-bold text-gray-800">Marya (आवाज SKC चा)</h4>
+                            <p class="mt-4 text-lg text-gray-600">A platform exclusively for parents to showcase their talents & to re-create school / college memories, enhancing their hidden wisdom & intelligence.</p>
+                        </div>
+                        <div class="md:order-2">
+                            <img src="assets/SKC Signature Events/1.png" alt="Marya Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img src="assets/SKC Signature Events/2.png" alt="Volcano Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-gray-800">Volcano</h4>
+                            <p class="mt-4 text-lg text-gray-600">An opportunity to apply scientific processes, articulate research on a topic & express thoughts, enhancing communication skills.</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-1">
+                            <h4 class="text-3xl font-bold text-gray-800">Dance SKCian Dance</h4>
+                            <p class="mt-4 text-lg text-gray-600">An event challenging students with different themes at each level, thereby elevating their dancing & leadership skills until they approach perfection.</p>
+                        </div>
+                        <div class="md:order-2">
+                            <img src="assets/SKC Signature Events/3.png" alt="Dance SKCian Dance Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <img src="assets/SKC Signature Events/5.png" alt="Carnival Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                        </div>
+                        <div>
+                            <h4 class="text-3xl font-bold text-gray-800">Carnival</h4>
+                            <p class="mt-4 text-lg text-gray-600">A fun-filled event to rekindle bonds & lip-smacking stalls put up by students which strongly enhance their business management skills.</p>
+                        </div>
+                    </div>
+
+                     <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div class="md:order-1">
+                            <h4 class="text-3xl font-bold text-gray-800">SKCian's ART EXPO</h4>
+                            <p class="mt-4 text-lg text-gray-600">A dream come true event for budding artists. An opportunity to display paintings in an ART gallery. Proceeds of sale are used to contribute for the education of Adivasi kids.</p>
+                        </div>
+                        <div class="md:order-2">
+                            <img src="assets/SKC Signature Events/4.png" alt="SKCian's Art Expo Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                        </div>
+                    </div>
+
+                     <div class="grid md:grid-cols-2 gap-12 items-center">
+                       <div>
+                           <img src="assets/SKC Signature Events/6.png" alt="Epiphany Event Logo" class="rounded-lg shadow-lg w-1/2 mx-auto card-hover">
+                       </div>
+                       <div>
+                           <h4 class="text-3xl font-bold text-gray-800">Expressionz</h4>
+                           <p class="mt-4 text-lg text-gray-600">A golden opportunity to bring out innate capabilities in different contests. An event which kindles fire in students and inspires them to become achievers.</p>
+                       </div>
+                   </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <section id="spotlights" class="py-20 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Holistic Development</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">Daily Dosage & SKC Spotlights</h3>
+                    <p class="mt-4 max-w-3xl mx-auto text-gray-600 font-semibold text-lg italic">
+                        "Activities keep students <span class="text-[#d32f2f] font-extrabold">positive, energetic</span> & helps to <span class="text-[#d32f2f] font-extrabold">shape overall personality</span> & <span class="text-[#d32f2f] font-extrabold">Interpersonal skills</span>."
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="bg-white p-8 rounded-xl shadow-xl card-hover border-t-4 border-[#1a237e]">
+                        <h4 class="text-2xl font-extrabold mb-6 text-[#1a237e] border-b-2 border-gray-200 pb-3">Daily Dosage for Personal Growth</h4>
+                        <ul class="space-y-4 text-lg md:text-xl">
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">MONDAY:</span> 
+                                <span class="text-gray-900">MUNCH</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">TUESDAY:</span> 
+                                <span class="text-gray-900">TREAT</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">WEDNESDAY:</span> 
+                                <span class="text-gray-900">DELIGHT</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">THURSDAY:</span> 
+                                <span class="text-gray-900">TRYST</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">FRIDAY:</span> 
+                                <span class="text-gray-900">FEAST</span>
+                            </li>
+                            <li class="flex items-center text-gray-700">
+                                <i data-lucide="chevrons-right" class="h-5 w-5 text-red-500 mr-3"></i> 
+                                <span class="font-bold w-1/2 min-w-1/3">SATURDAY:</span> 
+                                <span class="text-gray-900">SURPRISE</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-xl card-hover border-t-4 border-[#1a237e]">
+                        <h4 class="text-2xl font-extrabold mb-6 text-[#1a237e] border-b-2 border-gray-200 pb-3">SKC Spotlights (Events sought after by SKCians)</h4>
+                        <ul class="space-y-3 text-lg md:text-xl list-disc list-inside text-gray-700 font-medium">
+                            <li>INDEPENDENCE ROCK</li>
+                            <li>ONE NIGHT CAMP</li>
+                            <li>MONSOON HIKE & TRACK</li>
+                            <li>CONVOCATION</li>
+                            <li>TERM END PARTY</li>
+                            <li>VICTORY MEET</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="campuses" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Our Presence</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">Accessible Education Across the Region</h3>
+                     <p class="mt-4 max-w-2xl mx-auto text-gray-600">We are proud to be located in multiple branches to serve students from various communities.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 items-center">
+                    <div class="text-center p-4">
+                        <img src="assets/9.png" alt="SKC Vasai East Campus Logo" class="h-36 w-auto mx-auto transition-transform duration-300 hover:scale-110">
+                        <a href="https://www.google.com/maps/search/?api=1&query=SKC+School+Vasai+East" target="_blank" class="mt-4 inline-flex items-center text-[#1a237e] font-semibold hover:underline">
+                            Find Us <i data-lucide="map-pin" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                     <div class="text-center p-4">
+                        <img src="assets/10.png" alt="SKC Vasai West Campus Logo" class="h-36 w-auto mx-auto transition-transform duration-300 hover:scale-110">
+                        <a href="https://maps.app.goo.gl/7qnjMEH6g6xA7UUq8" target="_blank" class="mt-4 inline-flex items-center text-[#1a237e] font-semibold hover:underline">
+                            Find Us <i data-lucide="map-pin" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                     <div class="text-center p-4">
+                        <img src="assets/11.png" alt="SKC Nallasopara West Campus Logo" class="h-36 w-auto mx-auto transition-transform duration-300 hover:scale-110">
+                        <a href="https://maps.app.goo.gl/gavH5sHMuRrHg6kq5" target="_blank" class="mt-4 inline-flex items-center text-[#1a237e] font-semibold hover:underline">
+                            Find Us <i data-lucide="map-pin" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                     <div class="text-center p-4">
+                        <img src="assets/12.png" alt="SKC Mira Road Campus Logo" class="h-36 w-auto mx-auto transition-transform duration-300 hover:scale-110">
+                        <a href="https://maps.app.goo.gl/Peg1aTzJNvLDReEh9" target="_blank" class="mt-4 inline-flex items-center text-[#1a237e] font-semibold hover:underline">
+                            Find Us <i data-lucide="map-pin" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                     <div class="text-center p-4 col-span-2 sm:col-span-1 lg:col-span-1">
+                        <img src="assets/13.png" alt="SKC Igatpuri Campus Logo" class="h-36 w-auto mx-auto transition-transform duration-300 hover:scale-110">
+                        <a href="https://www.google.com/maps/search/?api=1&query=SKC+School+Igatpuri" target="_blank" class="mt-4 inline-flex items-center text-[#1a237e] font-semibold hover:underline">
+                            Find Us <i data-lucide="map-pin" class="ml-2 h-4 w-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="team" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-sm font-bold uppercase tracking-widest section-subtitle">Our Dedicated Team</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold mt-2 section-title">The Pillars of Our Success</h3>
+                    <p class="mt-4 max-w-2xl mx-auto text-gray-600">Meet the leaders and educators who inspire excellence at each of our campuses.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-8" id="team-tabs" role="tablist" aria-label="Team campuses">
+                    <button class="tab-btn active py-2 px-4 rounded-full font-semibold transition-colors duration-300" data-tab="vasai-east" role="tab" aria-selected="true">Vasai (East)</button>
+                    <button class="tab-btn py-2 px-4 rounded-full font-semibold transition-colors duration-300 bg-gray-200 text-gray-700" data-tab="vasai-west" role="tab" aria-selected="false">Vasai (West)</button>
+                    <button class="tab-btn py-2 px-4 rounded-full font-semibold transition-colors duration-300 bg-gray-200 text-gray-700" data-tab="nallasopara" role="tab" aria-selected="false">Nallasopara (West)</button>
+                    <button class="tab-btn py-2 px-4 rounded-full font-semibold transition-colors duration-300 bg-gray-200 text-gray-700" data-tab="igatpuri" role="tab" aria-selected="false">Igatpuri</button>
+                    <button class="tab-btn py-2 px-4 rounded-full font-semibold transition-colors duration-300 bg-gray-200 text-gray-700" data-tab="mira-road" role="tab" aria-selected="false">Mira Road</button>
+                </div>
+
+                <div class="pt-4">
+                    <div id="vasai-east-content" class="tab-content active" role="tabpanel">
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="text-center p-4">
+                                <img src="assets/Pillars/Margaret Miss.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Margaret Dsouza">
+                                <h4 class="font-bold text-lg">Mrs. Margaret Dsouza</h4>
+                                <p class="text-gray-500">Principal</p>
+                            </div>
+                             <div class="text-center p-4"><img src="assets/Pillars/Urmila Miss.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Team Member"><h4 class="font-bold text-lg">Mrs. Urmila Raut</h4><p class="text-gray-500">Campus Head</p></div>
+                             <div class="text-center p-4"><img src="assets/Pillars/Sunita Miss.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Team Member"><h4 class="font-bold text-lg">Mrs. Sunita Jagtap</h4><p class="text-gray-500">Vertical Head</p></div>
+                             <div class="text-center p-4"><img src="assets/Pillars/Sangeeta Miss.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Team Member"><h4 class="font-bold text-lg">Mrs. Sangeeta Raut</h4><p class="text-gray-500">Core Member</p></div>
+                        </div>
+                    </div>
+                     <div id="vasai-west-content" class="tab-content" role="tabpanel">
+                        <div class="flex flex-wrap justify-center gap-12">
+                            <div class="text-center p-4 w-64">
+                                <img src="assets/Pillars/Adil Sir.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Dr Adil Siddiqui">
+                                <h4 class="font-bold text-lg">Dr. Adil Siddiqui</h4>
+                                <p class="text-gray-500">Principal</p>
+                            </div>
+                            <div class="text-center p-4 w-64">
+                                <img src="assets/Pillars/Arshiya Miss.jpg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Miss Arshiya">
+                                <h4 class="font-bold text-lg">Miss. Arshiya Shaikh</h4>
+                                <p class="text-gray-500">Vice-Principal</p>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div id="nallasopara-content" class="tab-content" role="tabpanel">
+                        <div class="flex justify-center">
+                            <div class="text-center p-4 w-64">
+                                <img src="assets/Pillars/Rita Miss New.jpeg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Nallasopara Principal">
+                                <h4 class="font-bold text-lg">Mrs. Rita Flavian</h4>
+                                <p class="text-gray-500">Core Member</p>
+                            </div>
+                        </div>
+                    </div>
+                     
+                    <div id="igatpuri-content" class="tab-content" role="tabpanel">
+                         <div class="flex flex-wrap justify-center gap-12">
+                             <div class="text-center p-4 w-64">
+                                 <img src="assets/Pillars/Tosha Miss.jpeg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Igatpuri Principal">
+                                 <h4 class="font-bold text-lg">Mrs. Tosha Tiwari</h4>
+                                 <p class="text-gray-500">Principal</p>
+                             </div>
+                             <div class="text-center p-4 w-64">
+                                 <img src="assets/Pillars/Sarthiki Miss.jpeg" class="w-36 h-36 rounded-full mx-auto mb-4" alt="Igatpuri Vice Principal">
+                                 <h4 class="font-bold text-lg">Miss. Sarthaki Jain</h4>
+                                 <p class="text-gray-500">Core Member</p>
+                             </div>
+                         </div>
+                    </div>
+ 
+                    <div id="mira-road-content" class="tab-content" role="tabpanel">
+                         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="results" class="py-20 bg-[#1a237e]">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-xl font-bold uppercase tracking-widest text-red-400">Our Results Speak</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mt-2 text-white">S.S.C. Results 2025: 100% Success, Again!</h3>
+                    <p class="mt-4 max-w-3xl mx-auto text-gray-300">We extend our heartfelt congratulations to the students and teachers for their unwavering efforts in achieving this outstanding result. Your dedication has once again made history.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-gray-800">
+                    <div class="bg-white rounded-lg p-6 shadow-xl card-hover">
+                        <h4 class="text-2xl font-bold mb-4 text-center section-title">SKC IGATPURI</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li class="flex justify-between items-center"><span>90% & Above:</span> <span class="font-bold bg-blue-100 px-2 rounded">03</span></li>
+                            <li class="flex justify-between items-center"><span>85% to 89%:</span> <span class="font-bold bg-blue-100 px-2 rounded">01</span></li>
+                            <li class="flex justify-between items-center"><span>Distinction (75-84%):</span> <span class="font-bold bg-blue-100 px-2 rounded">06</span></li>
+                            <li class="flex justify-between items-center"><span>First Class (60-74%):</span> <span class="font-bold bg-blue-100 px-2 rounded">11</span></li>
+                            <li class="flex justify-between items-center"><span>Second Class:</span> <span class="font-bold bg-blue-100 px-2 rounded">05</span></li>
+                             <li class="flex justify-between items-center"><span>Pass Class:</span> <span class="font-bold bg-blue-100 px-2 rounded">02</span></li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t-2 font-bold text-xl flex justify-between">TOTAL: <span>28</span></div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-xl card-hover transform md:scale-105 border-4 border-red-500">
+                        <h4 class="text-2xl font-bold mb-4 text-center section-title">SKC VASAI (E)</h4>
+                        <ul class="space-y-2 text-lg">
+                            <li class="flex justify-between items-center"><span>90% & Above:</span> <span class="font-bold bg-red-100 px-2 rounded">04</span></li>
+                            <li class="flex justify-between items-center"><span>85% to 89%:</span> <span class="font-bold bg-red-100 px-2 rounded">08</span></li>
+                            <li class="flex justify-between items-center"><span>Distinction (75-84%):</span> <span class="font-bold bg-red-100 px-2 rounded">23</span></li>
+                            <li class="flex justify-between items-center"><span>First Class (60-74%):</span> <span class="font-bold bg-red-100 px-2 rounded">29</span></li>
+                            <li class="flex justify-between items-center"><span>Second Class:</span> <span class="font-bold bg-red-100 px-2 rounded">08</span></li>
+                             <li class="flex justify-between items-center"><span>No Pass Class:</span> <span class="font-bold bg-red-100 px-2 rounded">0</span></li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t-2 font-bold text-xl flex justify-between">TOTAL: <span>72</span></div>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-xl card-hover">
+                        <h4 class="text-2xl font-bold mb-4 text-center section-title">SKC NALLASOPARA (W)</h4>
+                         <ul class="space-y-2 text-lg">
+                            <li class="flex justify-between items-center"><span>85% & Above:</span> <span class="font-bold bg-blue-100 px-2 rounded">01</span></li>
+                            <li class="flex justify-between items-center"><span>Distinction (75-84%):</span> <span class="font-bold bg-blue-100 px-2 rounded">09</span></li>
+                            <li class="flex justify-between items-center"><span>First Class (60-74%):</span> <span class="font-bold bg-blue-100 px-2 rounded">15</span></li>
+                            <li class="flex justify-between items-center"><span>Second Class:</span> <span class="font-bold bg-blue-100 px-2 rounded">12</span></li>
+                             <li class="flex justify-between items-center"><span>No Pass Class:</span> <span class="font-bold bg-blue-100 px-2 rounded">0</span></li>
+                        </ul>
+                        <div class="mt-4 pt-4 border-t-2 font-bold text-xl flex justify-between">TOTAL: <span>37</span></div>
+                    </div>
+                </div>
+                 <div class="mt-12 bg-white/10 p-6 rounded-lg text-white">
+                    <h4 class="text-2xl font-bold mb-4 text-center">Result Analytics</h4>
+                    <ul class="space-y-2 text-center text-gray-200">
+                        <li>► An astounding percentage of our students passed with distinction & in all of them passed with first class & above.</li>
+                        <li>► Over 75% of our students passed with first class & above across all branches.</li>
+                        <li>► SKC Makes Winners. Our Results Speak.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact" class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold">SKC Group of Institutions</h3>
+                    <p class="mt-2 text-gray-400">SKC: A Generation of Learning.<br> Complete Education (KG to PG).</p>
+                     <p class="mt-4 text-gray-400"><b>Head Office:</b> SKC School, Junior & Degree College, Behind New Achole Police station, Evershine city, Near Shree Ram Van, Vasai East - 401208.</p>
+                </div>
+                <div>
+                     <h3 class="text-xl font-bold">Contact Us</h3>
+                     <div class="mt-4 space-y-4">
+                         <a href="tel:+918390251424" class="w-full bg-red-600 hover:bg-red-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition duration-300 shadow-lg group">
+                             <i data-lucide="phone-call" class="mr-3 h-5 w-5 group-hover:animate-pulse"></i>
+                             <span>Call Admissions Now</span>
+                         </a>
+                         <button id="open-email-modal-btn" class="w-full bg-[#1a237e] hover:bg-indigo-900 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition duration-300 shadow-lg group">
+                             <i data-lucide="mail-check" class="mr-3 h-5 w-5"></i>
+                             <span>Send a Custom Email Inquiry</span>
+                         </button>
+                     </div>
+                </div>
+                 <div>
+                     <h3 class="text-xl font-bold">Follow Us</h3>
+                     <div class="flex space-x-4 mt-4">
+                        <a href="https://www.youtube.com/c/SKCSchoolJrCollege" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="youtube" class="h-6 w-6"></i></a>
+                        <a href="https://www.instagram.com/skc_school_jr_degree_college" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="instagram" class="h-6 w-6"></i></a>
+                        <a href="https://www.facebook.com/SKCSchoolJrCollege" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="facebook" class="h-6 w-6"></i></a>
+                        <a href="https://x.com/SKC_School" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="twitter" class="h-6 w-6"></i></a>
+                        <a href="https://www.linkedin.com/company/skc-school-jr-college" target="_blank" class="text-gray-400 hover:text-white"><i data-lucide="linkedin" class="h-6 w-6"></i></a>
+                     </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-500">
+                <p>© 2025 SKC Group of Institutions. All Rights Reserved.</p>
+                <p>Website Developed by 
+                    <a href="https://jwalayadav-portfolio.netlify.app" target="_blank" class="text-white font-semibold hover:underline transition-colors duration-300">Jwala Yadav</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div id="admission-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4 modal-overlay opacity-0 pointer-events-none">
+        <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8 max-w-lg w-full transform scale-95 modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-[#1a237e]">Admission Inquiry</h2>
+                <button id="close-admission-modal" class="text-gray-500 hover:text-gray-800">×</button>
+            </div>
+            <p class="text-gray-600 mb-6">Please fill out the form below. The details will be sent via WhatsApp for a quick response.</p>
+            <form id="whatsapp-inquiry-form">
+                <div class="space-y-4">
+                    <div>
+                        <label for="parent-name" class="block text-sm font-medium text-gray-700">Name of Parent / Student</label>
+                        <input type="text" id="parent-name" name="parent-name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                    </div>
+                    <div>
+                        <label for="relation" class="block text-sm font-medium text-gray-700">Your Relation to Student</label>
+                        <select id="relation" name="relation" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option>Student</option>
+                            <option>Father</option>
+                            <option>Mother</option>
+                            <option>Brother</option>
+                            <option>Sister</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                     <div>
+                        <label for="standard" class="block text-sm font-medium text-gray-700">Admission For (Standard / Course)</label>
+                        <select id="standard" name="standard" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option>Nursery</option>
+                            <option>Junior KG</option>
+                            <option>Senior KG</option>
+                            <option>Grade - 1</option>
+                            <option>Grade - 2</option>
+                            <option>Grade - 3</option>
+                            <option>Grade - 4</option>
+                            <option>Grade - 5</option>
+                            <option>Grade - 6</option>
+                            <option>Grade - 7</option>
+                            <option>Grade - 8</option>
+                            <option>Grade - 9</option>
+                            <option>Grade - 10</option>
+                            <option>Grade - 11</option>
+                            <option>Grade - 12</option>
+                            <option>B.COM</option>
+                            <option>BMS</option>
+                            <option>BBI</option>
+                            <option>BFM</option>
+                            <option>B.SCI(IT)</option>
+                            <option>BAF</option>
+                        </select>
+                    </div>
+                     <div>
+                        <label for="branch" class="block text-sm font-medium text-gray-700">Preferred Branch</label>
+                        <select id="branch" name="branch" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500">
+                            <option>Vasai (East)</option>
+                            <option>Vasai (West)</option>
+                            <option>Nallasopara (West)</option>
+                            <option>Igatpuri</option>
+                            <option>Mira road</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button type="submit" class="w-full bg-[#d32f2f] hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md flex items-center justify-center transition duration-300">
+                        <i data-lucide="send" class="mr-2 h-5 w-5"></i>
+                        Confirm & Send Inquiry
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">You will be redirected to WhatsApp to send the message.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="email-modal" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50 p-4 modal-overlay opacity-0 pointer-events-none">
+        <div class="bg-white rounded-lg shadow-2xl p-6 md:p-8 max-w-lg w-full transform scale-95 modal-content">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-2xl font-bold text-[#1a237e]">Custom Email Inquiry</h2>
+                <button id="close-email-modal-btn" class="text-gray-500 hover:text-gray-800">×</button>
+            </div>
+            <p class="text-gray-600 mb-6">Enter your details and inquiry subject to generate a customized email draft.</p>
+            <form id="email-inquiry-form">
+                <div class="space-y-4">
+                    <div>
+                        <label for="email-sender-name" class="block text-sm font-medium text-gray-700">Your Full Name</label>
+                        <input type="text" id="email-sender-name" name="email-sender-name" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., John Doe">
+                    </div>
+                    <div>
+                        <label for="email-subject" class="block text-sm font-medium text-gray-700">Email Subject</label>
+                        <input type="text" id="email-subject" name="email-subject" required class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="e.g., Inquiry about Degree College Admissions">
+                    </div>
+                    <div>
+                        <label for="email-message" class="block text-sm font-medium text-gray-700">Message Preview (Optional)</label>
+                        <textarea id="email-message" name="email-message" rows="4" class="mt-1 block w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500" placeholder="Type your detailed query here..."></textarea>
+                    </div>
+                </div>
+                <div class="mt-8">
+                    <button type="submit" class="w-full bg-[#d32f2f] hover:bg-red-700 text-white font-bold py-3 px-4 rounded-md flex items-center justify-center transition duration-300">
+                        <i data-lucide="mail" class="mr-2 h-5 w-5"></i>
+                        Open Mail Client with Draft
+                    </button>
+                    <p class="text-xs text-gray-500 mt-3 text-center">Your default email client will open to send the message to skcjuniorcollege12@gmail.com.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/diwali.js"></script>
+</body>
+</html>

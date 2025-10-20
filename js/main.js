@@ -3,6 +3,9 @@
  * * This file contains the core JavaScript functionality for the SKC website.
  * It handles UI interactions such as the mobile menu, modals, and form submissions.
  * The Lucide icons are initialized here as well.
+ *
+ * * [UPDATED on Oct 20, 2025] - Implemented dynamic/conditional admission enquiry form.
+ * * [UPDATED on Oct 19, 2025] - Added script to deter code inspection.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -93,21 +96,81 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize Email Modal
     const { closeModal: closeEmailModal } = setupModal('open-email-modal-btn', 'close-email-modal-btn', 'email-modal');
 
-    // --- WhatsApp Inquiry Form Logic ---
-    const whatsappForm = document.getElementById('whatsapp-inquiry-form');
+    // --- Dynamic Admission Form Logic ---
+    const admissionCategory = document.getElementById('admission-category');
+    const schoolFields = document.getElementById('school-fields');
+    const jcFields = document.getElementById('jc-fields');
+    const degreeFields = document.getElementById('degree-fields');
+    
+    const schoolSelect = document.getElementById('standard-school');
+    const jcSelect = document.getElementById('standard-jc');
+    const degreeYearSelect = document.getElementById('degree-year');
+    const degreeCourseSelect = document.getElementById('degree-course');
+
+    if (admissionCategory) {
+        admissionCategory.addEventListener('change', function() {
+            const category = this.value;
+
+            // Hide all dynamic fields first
+            schoolFields.classList.add('hidden');
+            jcFields.classList.add('hidden');
+            degreeFields.classList.add('hidden');
+            
+            // Remove 'required' attribute from all selects
+            schoolSelect.required = false;
+            jcSelect.required = false;
+            degreeYearSelect.required = false;
+            degreeCourseSelect.required = false;
+
+            // Show the relevant fields and set required attribute
+            if (category === 'school') {
+                schoolFields.classList.remove('hidden');
+                schoolSelect.required = true;
+            } else if (category === 'jc') {
+                jcFields.classList.remove('hidden');
+                jcSelect.required = true;
+            } else if (category === 'degree') {
+                degreeFields.classList.remove('hidden');
+                degreeYearSelect.required = true;
+                degreeCourseSelect.required = true;
+            }
+        });
+    }
+
+
+    // --- WhatsApp Enquiry Form Logic ---
+    const whatsappForm = document.getElementById('whatsapp-enquiry-form');
     if (whatsappForm) {
         whatsappForm.addEventListener('submit', function(event) {
             event.preventDefault();
+            
+            // General Info
             const parentName = document.getElementById('parent-name').value;
             const relation = document.getElementById('relation').value;
-            const standard = document.getElementById('standard').value;
             const branch = document.getElementById('branch').value;
             const phoneNumber = "918390251424";
 
+            // Dynamic Info
+            const category = admissionCategory.value;
+            let admissionDetails = '';
+
+            if (category === 'school') {
+                admissionDetails = `*Admission For:* School - ${schoolSelect.value}`;
+            } else if (category === 'jc') {
+                admissionDetails = `*Admission For:* Junior College - ${jcSelect.value}`;
+            } else if (category === 'degree') {
+                admissionDetails = `*Admission For:* Degree College - ${degreeYearSelect.value} of ${degreeCourseSelect.value}`;
+            } else {
+                // This case should not be hit if the form is filled correctly, but it's good practice.
+                alert("Please select an admission category.");
+                return;
+            }
+
+            // Construct Message
             let message = `Hello, I'm contacting you from the SKC Groups of School website. I would like to inquire about admission.%0A%0A`;
             message += `*Contact Name:* ${encodeURIComponent(parentName)}%0A`;
             message += `*Relation to Student:* ${encodeURIComponent(relation)}%0A`;
-            message += `*Admission For:* ${encodeURIComponent(standard)}%0A`;
+            message += `${encodeURIComponent(admissionDetails)}%0A`;
             message += `*Preferred Branch:* ${encodeURIComponent(branch)}%0A%0A`;
             message += `Please provide further details.`;
             
@@ -116,17 +179,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- Custom Email Inquiry Form Logic ---
-    const emailForm = document.getElementById('email-inquiry-form');
+    // --- Custom Email Enquiry Form Logic ---
+    const emailForm = document.getElementById('email-enquiry-form');
     if (emailForm) {
         emailForm.addEventListener('submit', function(event) {
             event.preventDefault();
             const senderName = document.getElementById('email-sender-name').value;
-            const subject = document.getElementById('email-subject').value || 'General Inquiry from SKC Website';
+            const subject = document.getElementById('email-subject').value || 'General Enquiry from SKC Website';
             const messageBody = document.getElementById('email-message').value || 'Hello SKC Admissions Team,\n\nI am writing to inquire about the details mentioned in the subject line. Please provide me with the necessary information.\n\nThank you,\n\n';
             
-            const finalSubject = encodeURIComponent(`[SKC Website Inquiry] - ${subject}`);
-            const finalBody = encodeURIComponent(`Sender Name: ${senderName}\n\n--- Inquiry Details ---\n\n${messageBody}`);
+            const finalSubject = encodeURIComponent(`[SKC Website Enquiry] - ${subject}`);
+            const finalBody = encodeURIComponent(`Sender Name: ${senderName}\n\n--- Enquiry Details ---\n\n${messageBody}`);
             
             const emailAddress = "skcjuniorcollege12@gmail.com";
             const mailtoURL = `mailto:${emailAddress}?subject=${finalSubject}&body=${finalBody}`;
@@ -135,4 +198,32 @@ document.addEventListener('DOMContentLoaded', () => {
             if (closeEmailModal) closeEmailModal();
         });
     }
+
+    // --- Disable Inspect Element ---
+    // **IMPORTANT NOTE:** This is not a real security measure. It only deters casual users.
+    // Anyone with basic browser knowledge can still access the code.
+
+    // Disable Right-Click
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    // Disable Keyboard Shortcuts for Developer Tools
+    document.addEventListener('keydown', event => {
+        // Disable F12
+        if (event.keyCode === 123) {
+            event.preventDefault();
+        }
+        // Disable Ctrl+Shift+I (Inspect)
+        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+            event.preventDefault();
+        }
+        // Disable Ctrl+Shift+J (Console)
+        if (event.ctrlKey && event.shiftKey && event.key === 'J') {
+            event.preventDefault();
+        }
+        // Disable Ctrl+U (View Source)
+        if (event.ctrlKey && event.key === 'U') {
+            event.preventDefault();
+        }
+    });
+
 });

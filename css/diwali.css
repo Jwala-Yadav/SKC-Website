@@ -44,3 +44,15 @@
     opacity: 0.9; 
     margin-left: 8px; 
 }
+
+/* ** RESPONSIVE FIX: Adjust credit font size for small screens ** */
+@media (max-width: 767px) {
+    .diwali-credit {
+        font-size: 11px;
+        left: 8px;
+        bottom: 8px;
+    }
+    .diwali-credit span {
+        font-size: 10px;
+    }
+}

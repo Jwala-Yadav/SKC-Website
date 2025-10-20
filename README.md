@@ -2,7 +2,7 @@
 
 A modern, responsive, and feature-rich website for the SKC Group of Institutions, showcasing their educational verticals, achievements, events, and campus information. The site is designed to be informative for prospective students and parents.
 
-**Live Demo:** [https://your-live-website-url.com](https://your-live-website-url.com)
+**Live Demo:** [Websitelink](https://skc-education.netlify.app/)
 
 ---
 
@@ -22,15 +22,22 @@ A modern, responsive, and feature-rich website for the SKC Group of Institutions
 
 Here’s a sneak peek of the website's key sections:
 
-| Hero Section | Our Verticals |
-| :---: | :---: |
-| ![Hero Section with Admission CTA](URL_FOR_HERO_IMAGE.png) | ![Educational Verticals Section](URL_FOR_VERTICALS_IMAGE.png) |
+**Festive Welcome**
 
-| Signature Events | Awards & Accolades |
-| :---: | :---: |
-| ![Signature Events Section](URL_FOR_EVENTS_IMAGE.png) | ![Awards Section](URL_FOR_AWARDS_IMAGE.png) |
+<img width="1897" height="902" alt="Diwali Welcome Message" src="https://github.com/user-attachments/assets/1fb9a019-b9df-4ff2-bbf1-a2738d403bae" />
 
----
+**Awards**
+
+<img width="1920" height="945" alt="Awards" src="https://github.com/user-attachments/assets/ff371802-73fd-420d-8aea-fd9383833ed1" />
+
+**Our Verticals**
+
+<img width="1920" height="1154" alt="All Verticals" src="https://github.com/user-attachments/assets/c0fe7f98-d2a0-46f1-a48d-bd92c4b6319a" />
+
+**Signature Events**
+
+<img width="1920" height="3167" alt="Signature Events" src="https://github.com/user-attachments/assets/53d79205-9bbf-4dfe-8d2d-6ecbfa156347" />
+
 
 ### 🛠️ Technologies Used
 
@@ -41,26 +48,8 @@ Here’s a sneak peek of the website's key sections:
 
 ---
 
-### 📂 How to Add Your Images to the README
-
-1.  **Create Screenshots:** Take screenshots of your website (e.g., `hero.png`, `verticals.png`).
-2.  **Add to Your Project:** Create a new folder in your project called `screenshots` and place your images inside it.
-3.  **Push to GitHub:** Use the Git Bash commands to add and push the new `screenshots` folder:
-    ```bash
-    git add screenshots/
-    git commit -m "Feat: Add screenshots for README"
-    git push
-    ```
-4.  **Get the URLs:**
-    * On your GitHub repository page, navigate into the `screenshots` folder.
-    * Click on an image (e.g., `hero.png`).
-    * Right-click the image and select "**Copy Image Address**" or "**Copy Image Link**".
-5.  **Update the README:** Replace the `URL_FOR_..._IMAGE.png` placeholders in this file with the URLs you just copied.
-
----
-
 ### 👨‍💻 Developed by
 
 * **Jwala Yadav**
-* **Portfolio:** [jwalayadav-portfolio.netlify.app](https://jwalayadav-portfolio.netlify.app)
-* **GitHub:** [@your-github-username](https://github.com/your-github-username)
+* **Portfolio:** [jwalayadav-portfolio.netlify.app](https://jwala-yadav.netlify.app)
+* **GitHub:** [Jwala-Yadav](https://github.com/Jwala-Yadav)

@@ -4,6 +4,8 @@
  * It's designed to be modular. To disable this feature, simply remove the
  * script tag for this file from index.html.
  *
+ * * [UPDATED on Oct 19, 2025] - Made animation responsive. Adjusts text size,
+ * spacing, and line breaks for mobile devices to prevent overflow.
  * * [UPDATED on Oct 18, 2025] - Replaced the balloon animation with a rocket/cracker
  * that launches each word upwards with a spark trail, as requested.
  */
@@ -79,6 +81,20 @@ function initDiwaliAnimation() {
         canvas.width = Math.round(cssW * DPR); canvas.height = Math.round(cssH * DPR);
         ctx.setTransform(1, 0, 0, 1, 0, 0); ctx.scale(DPR, DPR);
         w = cssW; h = cssH; hw = w / 2; hh = h / 2;
+
+        // ** RESPONSIVE FIX: Adjust text properties based on screen width **
+        if (w < 768) { // Mobile screens
+            opts.charSize = 28;
+            opts.charSpacing = 38;
+            opts.lineHeight = 44;
+            opts.strings = ["HAPPY", "DIWALI", "SKCian's"]; // Break into three lines for better fit
+        } else { // Desktop screens
+            opts.charSize = 44;
+            opts.charSpacing = 62;
+            opts.lineHeight = 72;
+            opts.strings = ["HAPPY", "DIWALI SKCian's"];
+        }
+        
         ctx.font = `${opts.charSize}px Verdana`;
     }
 
